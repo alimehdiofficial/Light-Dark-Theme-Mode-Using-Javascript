@@ -1,0 +1,100 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* CSS Variables */
+:root {
+  --bg-color: #000;
+  --fg-color: #333;
+  --title-color: #fff;
+  --body-color: #d3d3d3;
+  --blend-mode: lighten;
+}
+.light-theme {
+  --bg-color: #efefef;
+  --fg-color: #fff;
+  --title-color: #000;
+  --body-color: #808080;
+  --blend-mode: normal;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--body-color);
+  font-family: "Comic Neue", cursive;
+  font-size: 1.2rem;
+  transition: background-color 1.2s, color 1.2s;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 0;
+}
+
+.toggle-btn {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  border: 1.5px solid var(--body-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.container {
+  max-width: 100rem;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.content {
+  background-color: var(--fg-color);
+  box-shadow: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  transition: background-color 1.2s, color 1.2s;
+}
+
+.content-img {
+  flex: 0.5;
+}
+.content-text {
+  flex: 1;
+  padding: 4rem;
+}
+
+.content-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  color: var(--title-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 3.5rem;
+  margin: 0.5rem 0rem 3rem;
+}
+
+.action-btn {
+  color: var(--body-color);
+  display: inline-block;
+  text-decoration: none;
+  border: 1.5px solid var(--body-color);
+  padding: 0.6rem 1.5rem;
+  margin-top: 1.7rem;
+}
